@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+
+<title>WDYTaboutMe</title>
+	<link rel="shortcut icon" href="C:\Users\user\Documents\sem4\csc 264\individual assignment\titleBarIcon3.jpg" type="image/jpg">
+</head>
+
+<body background="backpage3.jpg">
+   <div align="center" style="position: absolute;background: rgb(0, 0, 0);background: rgba(0, 0, 0, 0.5);color: #f1f1f1;width: 100%;">
+	<font color="white">
+		
+<form name="myform" action="WDYTaboutMe.php"  method="POST" onsubmit="return validateForm()">
+<br><br><br><br><br><br><br>Enter Your Name:
+<input type="text" name="fname">
+
+
+<br><br>Your Nationality:
+<input type="radio" name="nationality" value="Malaysian">Malaysian
+<input type="radio" name="nationality" value="Non-Malaysian">Non-Malaysian
+
+<br><br>Your Gender:
+<select name="Gender">
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+
+<br><br>What you do now?:
+	<div style="align-content: center">
+<br><br><input type="radio" name="status" value="Primary School">Primary School
+<br><input type="radio" name="status" value="Secondary School">Secondary School
+<br><input type="radio" name="status" value="University Student">University Student
+<br><input type="radio" name="status" value="Currently Work">Currently Work
+<br><input type="radio" name="status" value="Do Nothing">Do Nothing
+</div>
+<div class align="center">
+  <p>From my hobby that I love, which one that you would like to try?</p>
+  <input type="checkbox" id="hobi1" name="hobby1" value="fishing">
+  <label for="hobbie1"> fishing </label><br>
+  <input type="checkbox" id="hobi2" name="hobby2" value="listening music">
+  <label for="hobbie2"> listening music </label><br>
+  <input type="checkbox" id="hobi3" name="hobby3" value="take a photo">
+  <label for="hobbie3"> take a photo </label><br>
+  <input type="checkbox" id="hobi4" name="hobby4" value="swimming">
+  <label for="hobbie4"> swimming </label><br>
+  <input type="checkbox" id="hobi5" name="hobby5" value="rollerblading">
+  <label for="hobbie5"> rollerblading </label><br>
+ </div>
+	
+<div align="center">
+<br><input type="submit" name="submit" value="SUBMIT">
+	</div>
+	
+	</form>
+</font>	 
+</div>	
+</body>
+	<body>
+		<script>
+function validateForm()
+{
+
+var valid=true;
+if (document.myform.fname.value=='')
+	{
+	alert('Pls fill in name');
+	document.myform.fname.focus();
+	valid=false;
+	}
+
+if((document.myform.nationality[0].checked == false) && (document.myform.natioanality[1].checked == false))
+	{
+	alert('Pls choose nationality');
+	valid=false;
+	}
+
+if (document.myform.gender.selectedIndex==0)
+	{
+	alert('Pls choose gender');
+	valid=false;
+	}
+}
+</script>
+	</body>
+</html>
